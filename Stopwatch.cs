@@ -23,9 +23,7 @@ namespace Stopwatch
         public string Stop()
         {
             _isOn = false;
-
             _endTime = DateTime.Now;
-
             _duration = _endTime - _startTime;
 
             return $"{_duration.Hours:00}:{_duration.Minutes:00}:{_duration.Seconds:00}";
