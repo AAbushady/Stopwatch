@@ -22,11 +22,16 @@ namespace Stopwatch
 
         public string Stop()
         {
+            if (!_isOn)
+            {
+                throw new InvalidOperationException("Stopwatch has not been started yet.");
+            }
+
             _isOn = false;
             _endTime = DateTime.Now;
             _duration = _endTime - _startTime;
 
-            return $"{_duration.Hours:00}:{_duration.Minutes:00}:{_duration.Seconds:00}";
+            return $"Duration: {_duration.Hours:00}:{_duration.Minutes:00}:{_duration.Seconds:00}";
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Stopwatch
                 Console.WriteLine("Press any key to stop the stopwatch.");
 
                 Console.ReadKey(true);
-                Console.WriteLine("{0} has elapsed.", stopwatch.Stop());
+                Console.WriteLine(stopwatch.Stop());
 
                 Console.WriteLine("Would you like to use the stop watch again?");
                 Console.Write("Type \"Quit\" to quit or just press enter to use the stopwatch again: ");
